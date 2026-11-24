@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lion Guidebook</title>
+
+<style>
+:root {
+  --green: #173526;
+  --gold: #e5b957;
+  --cream: #f6f3eb;
+  --white: #ffffff;
+  --text: #24352b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+header {
+  background: var(--green);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 35px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 8px 0;
+}
+
+header p {
+  color: #d9e5dc;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #244b36;
+  padding: 10px;
+  gap: 8px;
+}
+
+nav button {
+  background: transparent;
+  border: 1px solid #ffffff50;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+nav button:hover,
+nav button.active {
+  background: var(--gold);
+  color: var(--green);
+}
+
+main {
+  max-width: 950px;
+  margin: auto;
+  padding: 25px 18px;
+}
+
+h2 {
+  color: var(--green);
+}
+
+.card {
+  background: var(--white);
+  padding: 22px;
+  border-radius: 15px;
+  margin: 15px 0;
+  box-shadow: 0 3px 12px #0000000c;
+}
+
+.card h3 {
+  color: var(--green);
+}
+
+.card button,
+.action {
+  background: var(--green);
+  color: white;
+  padding: 11px 17px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card button:hover,
+.action:hover {
+  background: #315d43;
+}
+
+.example {
+  background: #edf2eb;
+  border-left: 4px solid var(--gold);
+  padding: 13px;
+  margin: 12px 0;
+  border-radius: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  font: inherit;
+  margin: 8px 0;
+}
+
+textarea {
+  min-height: 110px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background: var(--green);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 35px;
+}
+
+@media(max-width:600px) {
+  header h1 {
+    font-size: 29px;
+  }
+
+  nav button {
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">♌</div>
+  <h1>LION GUIDEBOOK</h1>
+  <p>Confidence. Communication. Relationships. Adulthood.</p>
+  <p>A social development guide for young adults ages 18–24.</p>
+</header>
+
+<nav>
+  <button class="active" onclick="showPage('home',this)">Home</button>
+  <button onclick="showPage('conversation',this)">Talking to Someone</button>
+  <button onclick="showPage('dating',this)">Dating</button>
+  <button onclick="showPage('relationships',this)">Relationships</button>
+  <button onclick="showPage('friends',this)">Friendships</button>
+  <button onclick="showPage('boundaries',this)">Boundaries</button>
+  <button onclick="showPage('adult',this)">Adult Life</button>
+  <button onclick="showPage('practice',this)">Practice Room</button>
+</nav>
+
+<main>
+
+<section id="home">
+
+  <h2>Welcome to Lion Guidebook 🦁</h2>
+
+  <div class="card">
+    <h3>Move through life with confidence.</h3>
+    <p>
+      Becoming an adult means learning how to communicate,
+      establish friendships, navigate dating, build relationships,
+      and handle real-life situations.
+    </p>
+    <p>
+      Lion Guidebook helps young adults develop these skills
+      through practical lessons and realistic scenarios.
+    </p>
+  </div>
+
+  <h2>Explore Your Guidebook</h2>
+
+  <div class="card">
+    <h3>💬 Social Confidence</h3>
+    <p>Learn how to introduce yourself, start conversations,
+    and become comfortable meeting new people.</p>
+    <button onclick="showPage('conversation')">Explore</button>
+  </div>
+
+  <div class="card">
+    <h3>❤️ Dating & Relationships</h3>
+    <p>Learn how to express romantic interest, date with intention,
+    recognize compatibility, and build healthy relationships.</p>
+    <button onclick="showPage('dating')">Explore</button>
+  </div>
+
+  <div class="card">
+    <h3>🤝 Friendships</h3>
+    <p>Develop meaningful friendships, maintain connections,
+    and improve your social life.</p>
+    <button onclick="showPage('friends')">Explore</button>
+  </div>
+
+  <div class="card">
+    <h3>🛡️ Boundaries & Respect</h3>
+    <p>Understand rejection, personal boundaries, mutual respect,
+    and recognizing unhealthy behavior.</p>
+    <button onclick="showPage('boundaries')">Explore</button>
+  </div>
+
+  <div class="card">
+    <h3>🧭 Adult Situations</h3>
+    <p>Learn workplace communication, networking,
+    conflict resolution, and self-advocacy.</p>
+    <button onclick="showPage('adult')">Explore</button>
+  </div>
+
+</section>
+
+<section id="conversation" class="hidden">
+
+  <h2>Talking to Someone You Like</h2>
+
+  <div class="card">
+    <h3>Step 1: Make the First Move</h3>
+    <p>Choose a natural moment when the person is available
+    and comfortable having a conversation.</p>
+
+    <div class="example">
+      "Hey, how's your day going?"
+      <br><br>
+      "Hey, I don't think we've officially met.
+      I'm Andre. What's your name?"
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Step 2: Get to Know Them</h3>
+    <p>Ask open-ended questions and share things about yourself.
+    A conversation should go both ways.</p>
+
+    <div class="example">
+      "What do you usually enjoy doing outside of school or work?"
+      <br><br>
+      "What kind of music are you into?"
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Step 3: Express Your Interest</h3>
+    <p>When the conversation feels mutual, communicate
+    your intentions without being overly aggressive.</p>
+
+    <div class="example">
+      "Honestly, I've enjoyed talking with you.
+      I'd like to get to know you better."
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Step 4: Ask for Their Number</h3>
+
+    <div class="example">
+      "Would you be comfortable exchanging numbers?
+      No pressure if not."
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Step 5: Handle Their Response</h3>
+    <p>If they're interested, continue getting to know each other.
+    If they're not interested, respect their decision.</p>
+
+    <div class="example">
+      "No worries. It was nice meeting you.
+      Have a good day!"
+    </div>
+  </div>
+
+</section>
+
+<section id="dating" class="hidden">
+
+  <h2>Dating Guide</h2>
+
+  <div class="card">
+    <h3>Dating With Intention</h3>
+    <p>Understand what you're looking for before entering
+    a dating situation.</p>
+    <ul>
+      <li>Casual dating</li>
+      <li>Getting to know someone</li>
+      <li>Long-term relationships</li>
+      <li>Marriage-oriented dating</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Getting to Know Someone's Dating Life</h3>
+    <p>Ask meaningful questions without making the conversation
+    feel like an interrogation.</p>
+
+    <div class="example">
+      "What are you actually looking for when it comes to dating?"
+      <br><br>
+      "What qualities do you value in a partner?"
+      <br><br>
+      "What are some things you consider dealbreakers?"
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Recognizing Red Flags</h3>
+    <ul>
+      <li>Dishonesty and repeated lying.</li>
+      <li>Controlling behavior.</li>
+      <li>Disrespecting boundaries.</li>
+      <li>Manipulation and emotional intimidation.</li>
+      <li>Consistently refusing accountability.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Recognizing Green Flags</h3>
+    <ul>
+      <li>Honest communication.</li>
+      <li>Mutual effort.</li>
+      <li>Emotional maturity.</li>
+      <li>Respect for personal boundaries.</li>
+      <li>Consistency between words and actions.</li>
+    </ul>
+  </div>
+
+</section>
+
+<section id="relationships" class="hidden">
+
+  <h2>Healthy Relationships</h2>
+
+  <div class="card">
+    <h3>Communication Is Essential</h3>
+    <p>Learn to express your feelings instead of expecting
+    your partner to automatically understand them.</p>
+  </div>
+
+  <div class="card">
+    <h3>Handling Disagreements</h3>
+    <div class="example">
+      "I understand your perspective, but I want you
+      to understand how I felt about the situation."
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Building Trust</h3>
+    <ul>
+      <li>Be honest.</li>
+      <li>Keep your promises.</li>
+      <li>Respect privacy.</li>
+      <li>Communicate expectations.</li>
+      <li>Give each other room to grow.</li>
+    </ul>
+  </div>
+
+</section>
+
+<section id="friends" class="hidden">
+
+  <h2>Building Friendships</h2>
+
+  <div class="card">
+    <h3>Meeting New People</h3>
+    <p>Start with shared environments such as college,
+    work, community events, and recreational activities.</p>
+
+    <div class="example">
+      "Are you attending the event later?"
+      <br><br>
+      "How long have you been working here?"
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Maintaining Friendships</h3>
+    <ul>
+      <li>Check in with your friends.</li>
+      <li>Make time for each other.</li>
+      <li>Celebrate each other's achievements.</li>
+      <li>Be dependable.</li>
+      <li>Respect each other's independence.</li>
+    </ul>
+  </div>
+
+</section>
+
+<section id="boundaries" class="hidden">
+
+  <h2>Boundaries & Respect</h2>
+
+  <div class="card">
+    <h3>Understanding Rejection</h3>
+    <p>Rejection is a normal part of social and dating life.
+    It doesn't determine your worth.</p>
+
+    <div class="example">
+      "Thanks for being honest. I respect that."
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Setting Personal Boundaries</h3>
+    <div class="example">
+      "I'm not comfortable with that."
+      <br><br>
+      "I need some personal space."
+      <br><br>
+      "Please don't speak to me that way."
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Respect Goes Both Ways</h3>
+    <p>Everyone has the right to establish boundaries.
+    Consent must be freely given and can be withdrawn
+    at any time.</p>
+  </div>
+
+</section>
+
+<section id="adult" class="hidden">
+
+  <h2>Real-Life Adult Situations</h2>
+
+  <div class="card">
+    <h3>Workplace Communication</h3>
+    <div class="example">
+      "Could you clarify what you need me to complete
+      before the deadline?"
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Networking</h3>
+    <div class="example">
+      "What kind of work do you do?
+      I've been interested in learning more about that field."
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Handling Conflict</h3>
+    <div class="example">
+      "I think there might have been a misunderstanding.
+      Can we talk about it?"
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Self-Advocacy</h3>
+    <p>Learn how to speak up for yourself in school,
+    employment, housing, and everyday responsibilities.</p>
+  </div>
+
+</section>
+
+<section id="practice" class="hidden">
+
+  <h2>Interactive Practice Room</h2>
+
+  <div class="card">
+    <h3>Practice Your Social Skills</h3>
+
+    <p id="scenario">
+      Scenario: You see someone you're interested in
+      after class. They're not in a rush.
+      How would you approach them?
+    </p>
+
+    <textarea id="response"
+      placeholder="Write what you would say..."></textarea>
+
+    <button class="action" onclick="reviewResponse()">
+      Review My Response
+    </button>
+
+    <p id="feedback"></p>
+
+    <button class="action" onclick="newScenario()">
+      New Scenario
+    </button>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <h3>♌ LION GUIDEBOOK</h3>
+  <p>Build confidence. Develop connections. Navigate adulthood.</p>
+  <p>Designed for young adults ages 18–24.</p>
+</footer>
+
+<script>
+
+function showPage(page, button) {
+
+  document.querySelectorAll("main section").forEach(section => {
+    section.classList.add("hidden");
+  });
+
+  document.getElementById(page).classList.remove("hidden");
+
+  document.querySelectorAll("nav button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  if (button) {
+    button.classList.add("active");
+  } else {
+    const matchingButton = [...document.querySelectorAll("nav button")]
+      .find(btn => btn.getAttribute("onclick").includes("'" + page + "'"));
+
+    if (matchingButton) matchingButton.classList.add("active");
+  }
+
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+const scenarios = [
+  "Scenario: You see someone you're interested in after class. They're not in a rush. How would you approach them?",
+  "Scenario: Someone tells you they're not interested in dating. How would you respond respectfully?",
+  "Scenario: You want to make a new friend at a college event. How would you introduce yourself?",
+  "Scenario: A friend repeatedly cancels plans. How would you communicate your feelings?",
+  "Scenario: You've had a great conversation with someone. How would you ask them on a date?"
+];
+
+let currentScenario = 0;
+
+function newScenario() {
+
+  currentScenario = (currentScenario + 1) % scenarios.length;
+
+  document.getElementById("scenario").textContent =
+    scenarios[currentScenario];
+
+  document.getElementById("response").value = "";
+
+  document.getElementById("feedback").textContent = "";
+}
+
+function reviewResponse() {
+
+  const answer = document.getElementById("response").value.trim();
+
+  const feedback = document.getElementById("feedback");
+
+  if (answer.length === 0) {
+    feedback.textContent = "Write a response first!";
+    return;
+  }
+
+  if (answer.length < 20) {
+    feedback.textContent =
+      "Good start! Try adding more context and making your intentions clear.";
+  } else {
+    feedback.textContent =
+      "Nice effort! Consider whether your response is natural, respectful, clear, and gives the other person room to respond.";
+  }
+
+}
+
+</script>
+
+</body>
+</html>
